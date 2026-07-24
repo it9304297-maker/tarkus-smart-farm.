@@ -4,26 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarkus Smart Farm</title>
-    <!-- 修改 1：使用 Flask 的標準寫法來連結 CSS，確保在 Render 部署時路徑不會出錯 -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <style>
-        /* 修改 2：直接在母片加上 Tarkus 招牌黃色，這樣即使 CSS 沒載入成功，基本色調還是在 */
-        .nav { 
-            background: #FFD700; 
-            padding: 15px; 
-            display: flex; 
-            justify-content: center; 
-            gap: 20px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .nav a { 
-            text-decoration: none; 
-            color: #333; 
-            font-weight: bold; 
-            font-size: 14px;
-        }
-        .nav a:hover { color: #2e7d32; }
-    </style>
+    
+    <!-- 重要：連結到你在 app.py 裡設定的 Python CSS 路由 -->
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <nav class="nav">
@@ -33,8 +16,8 @@
         <a href="/witness">成功案例</a>
         <a href="/partners">合作夥伴</a>
         <a href="/contact">聯絡我們</a>
-        <!-- 修改 3：把登入按鈕做明顯一點，符合老闆 User Story 的入口導向 -->
-        <a href="/login" style="color:#d32f2f; background:white; padding:5px 10px; border-radius:5px;">登入/註冊</a>
+        <!-- 符合老闆 User Story 的登入按鈕 -->
+        <a href="/login" style="color:#d32f2f; background:white; padding:5px 10px; border-radius:5px; font-weight:bold; text-decoration:none;">登入/註冊</a>
     </nav>
 
     <div class="content" style="min-height: 80vh;">
