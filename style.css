@@ -1,0 +1,133 @@
+/* --- 1. 全域變數設定 (Tarkus 品牌色) --- */
+:root {
+    --tarkus-yellow: #FFD700;
+    --tarkus-green: #2e7d32;
+    --light-gray: #f4f4f9;
+    --dark-text: #333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* --- 2. 導覽列 (Navbar) --- */
+.nav {
+    background-color: var(--tarkus-yellow);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: bold;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--tarkus-green);
+}
+
+/* --- 3. 內容區塊佈局 --- */
+.content {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    min-height: 70vh;
+}
+
+/* --- 4. 價格與產品卡片 (Card System) --- */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--tarkus-green);
+    margin-bottom: 15px;
+}
+
+/* --- 5. 按鈕 (Buttons) --- */
+.btn {
+    background-color: var(--tarkus-green);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    transition: opacity 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* --- 6. 表單樣式 (用於登入與聯絡我們) --- */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="email"], 
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box; /* 確保寬度包含 padding */
+}
+
+/* --- 7. 頁尾 (Footer) --- */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 13px;
+    opacity: 0.8;
+}
