@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="padding:40px; max-width:600px; margin:auto;">
+    <h2 style="text-align:center;">聯絡我們</h2>
+    <p><strong>公司名稱：</strong>Tarkustech Creative Co. Limited</p>
+    <p><strong>官方網站：</strong>https://tarkustech.com/en</p>
+    <hr>
+    <form style="display:flex; flex-direction:column; gap:10px;">
+        <input type="text" placeholder="您的姓名" style="padding:10px;">
+        <input type="email" placeholder="您的電子郵件" style="padding:10px;">
+        <textarea placeholder="您的訊息" style="padding:10px; height:100px;"></textarea>
+        <button type="button" style="background:#FFD700; padding:10px; border:none; cursor:pointer;">傳送訊息</button>
+    </form>
+</div>
+{% endblock %}
